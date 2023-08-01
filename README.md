@@ -16,3 +16,6 @@ _by Chris Minnick_
 - Markdown
 - Git
 - GitHub
+
+## Chapter 3: Using Data
+
