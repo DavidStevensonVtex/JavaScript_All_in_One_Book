@@ -1,4 +1,9 @@
 function makeUnorderedList(array) {
+    if (! Array.isArray(array)) {
+        console.log("The parameter is not an array.");
+        return "" ;
+    }
+
     let listItems = array.map(function(element) {
         return `<li>${element}</li>` ;
     }) ;
@@ -9,6 +14,9 @@ function makeUnorderedList(array) {
 
 let unorderedList = makeUnorderedList(['James', 'Robert', 'John', 'Michael', 'David', 'William']) ;
 console.log(unorderedList);
+
+makeUnorderedList(2);
+makeUnorderedList({ name: 'Dave' });
 
 // listItems:  [
 //     '<li>James</li>',
