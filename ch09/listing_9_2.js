@@ -15,3 +15,14 @@ class Coffee extends Beverage {
         this.howYouTakeIt = howYouTakeIt;
     }
 }
+
+const morningCoffee = new Coffee ( '64oz', 'hot', true, 'black' ) ;
+
+console.log(morningCoffee) ;
+
+// Coffee {
+//     size: '64oz',
+//     temperature: 'hot',
+//     hasCaffeine: true,
+//     howYouTakeIt: 'black'
+//   }
