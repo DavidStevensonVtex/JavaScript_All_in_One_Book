@@ -1,6 +1,7 @@
 // Listing 9-5. Creating static members
 
 class Cat {
+    static species = 'Felis catus' ;
     #isSleeping = false;
     paws = 4 ;
     sound = 'meow' ;
@@ -21,6 +22,8 @@ class Cat {
     }
 }
 
+console.log("Cat.species", Cat.species);
+
 let fuzzy = new Cat ( 'Fuzzy', 'Catnip mouse' ) ;
 console.log(fuzzy) ;
 
@@ -35,12 +38,13 @@ catch(e)
     console.error(e.message);
 }
 
+// Cat.species Felis catus
 // Cat {
-//     paws: 4,
-//     sound: 'meow',
-//     name: 'Fuzzy',
-//     favoriteToy: 'Catnip mouse'
-//   }
-  
-//   Attempt to herd a cat
-//   You can't do that.
+//   paws: 4,
+//   sound: 'meow',
+//   name: 'Fuzzy',
+//   favoriteToy: 'Catnip mouse'
+// }
+
+// Attempt to herd a cat
+// You can't do that.
