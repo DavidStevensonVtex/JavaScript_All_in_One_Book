@@ -11,7 +11,8 @@
             const testInput = document.getElementById('test-text');
             testInput.addEventListener('focus', (e) => {
                 console.log(`${e.target.value}`);
-            })
+                console.log(`The active element is: ${document.activeElement.id}`);
+            }) ;
 
             testInput.dispatchEvent(focusEvent);
         </script>
