@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Document</title>
+    </head>
+    <pre id="text-display-area"></pre>
+    <script>
+        const displayArea = document.getElementById('text-display-area');
+
+        async function openBook() {
+            const bookText = await bookLoad('moby_dick.txt')
+            displayArea.innerHTML = bookText;
+        }
+
+        function bookLoad(url)
+        {
+            return new Promise( (resolve, reject) => {
+                let request = new XMLHttpRequest() ;
+                request.open('GET', url);
+                request.onload = function() {
+                    if (request.status === 200 )
+                    {
+                        resolve(request.response);
+                    }
+                    else 
+                    {
+                        reject(Error(`The text couldn't be loaded: ${request.statusText}`));
+                    }
+                };
+
+                request.onerror = function() {
+                    reject(Error('There was a network error.'));
+                };
+
+                request.send();
+            });
+        }
+ 
+        openBook();
+
+    </script>
+</html>
