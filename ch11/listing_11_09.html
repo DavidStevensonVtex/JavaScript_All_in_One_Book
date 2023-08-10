@@ -9,8 +9,20 @@
         const displayArea = document.getElementById('text-display-area');
 
         async function openBook() {
-            const bookText = await bookLoad('moby_dick.txt')
-            displayArea.innerHTML = bookText;
+            try
+            {
+                const bookText = await bookLoad('moby_dick.txt')
+                displayArea.innerHTML = bookText;
+            }
+            catch ( e ) {
+                displayArea.innerHTML = e.message;
+                console.log("e", e);
+                console.log("e.message", e.message);
+            }
+            finally 
+            {
+                console.log("openBook load request completed.");
+            }
         }
 
         function bookLoad(url)
