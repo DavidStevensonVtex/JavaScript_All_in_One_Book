@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Document</title>
+    </head>
+    <div id="text-display-area"></div>
+    <script>
+
+        function processData(response)
+        {
+            console.log("processData");
+
+            console.log(response.status);
+
+            // console.log(response.text());
+            // console.log(response.text());
+            console.log(response);
+        }
+
+        async function getData() {
+            const response = await fetch('moby_dick.txt');
+            console.log(response);
+            console.log(response.status);
+            if ( response.status === 200) {
+                const bookText = await response.text() ;
+                const displayArea = document.getElementById('text-display-area');
+                displayArea.innerText = bookText ;
+            }
+
+            const response2 = await processData(response);
+            return response ;
+        }
+
+        let response = getData();
+</script>
+</html>
