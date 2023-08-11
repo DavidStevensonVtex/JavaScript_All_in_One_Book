@@ -1,0 +1,1 @@
+import { stateName, capitalCity } from './modules/oregonInfo.js'
