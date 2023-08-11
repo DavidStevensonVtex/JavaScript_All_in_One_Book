@@ -1,1 +1,1 @@
-import { stateName, capitalCity } from './modules/oregonInfo.js'
+import { stateName, capitalCity } from './modules/oregonInfo.js' ;
