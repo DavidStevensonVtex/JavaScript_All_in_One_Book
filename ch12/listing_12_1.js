@@ -1,6 +1,6 @@
 export const API = 'https://api.example.com' ;
 
-export const colorThemeDrk = {
+export const colorThemeDark = {
     backgroundColor: '#000',
     textColor: '#EEE',
     headerColor: '#FF0000',
@@ -20,3 +20,6 @@ export const labels = {
         contactLink: 'Contact Us'
     }
 }
+
+// Another export option
+// export { API, colorThemeDark, colorThemeLight, labels } ;
