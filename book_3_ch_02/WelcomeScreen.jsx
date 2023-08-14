@@ -1,13 +1,26 @@
-// Listing 2-4: Using Element Variables
+// Listing 2-5: Conditional Rendering with an Element Variable
 
 import Message from './Message' ;
 
-function WelcomeScreen() {
-    const header = (
-        <h1>
-            <Message message="Welcome!" messageType="header" />
-        </h1>
-    ) ;
+function WelcomeScreen( { loggedIn } ) {
+    let header ;
+    if (loggedIn) {
+        header = (
+            <h1>
+                <Message message="Welcome!" messageType="header" />
+            </h1>
+        )
+    }
+    else
+    {
+        header = (
+            <header>
+                <h1>
+                    <Message message="Please log in to continue!" messageType="header" />
+                </h1>
+            </header>
+        )
+    }
 
     return { header } ;
 }
