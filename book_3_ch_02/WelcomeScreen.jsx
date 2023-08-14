@@ -1,28 +1,15 @@
-// Listing 2-5: Conditional Rendering with an Element Variable
+// Listing 2-6: Conditional Rendering with &&
 
-import Message from './Message' ;
+import WelcomeMessage from './WelcomeMessage' ;
 
 function WelcomeScreen( { loggedIn } ) {
-    let header ;
-    if (loggedIn) {
-        header = (
-            <h1>
-                <Message message="Welcome!" messageType="header" />
-            </h1>
-        )
-    }
-    else
-    {
-        header = (
-            <header>
-                <h1>
-                    <Message message="Please log in to continue!" messageType="header" />
-                </h1>
-            </header>
-        )
-    }
-
-    return { header } ;
+    return (
+        <div>
+            { loggedIn && <WelcomeMessage />}
+            NOte: if you don't see the welcome message,
+            you're not logged in.
+        </div>
+    ) ;
 }
 
 export default WelcomeScreen ;
