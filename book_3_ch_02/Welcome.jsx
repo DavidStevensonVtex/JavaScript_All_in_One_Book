@@ -1,6 +1,7 @@
-// Listing 2-7: Using Multiple Conditions with &&
+// Listing 2-8: Conditional Rendering with the Conditional Operator
 
 import WelcomeMessage from './WelcomeMessage' ;
+import Login from './Login' ;
 
 function Welcome ( { loggedIn, isHuman } ) {
     return (
