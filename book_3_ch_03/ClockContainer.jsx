@@ -34,3 +34,4 @@ function Clock(props) {
     );
 }
 
+export default ClockContainer ;
