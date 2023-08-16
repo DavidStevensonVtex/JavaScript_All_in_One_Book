@@ -15,3 +15,5 @@ function RecordClicks(props) {
 
     return <button onClick={incrementCount}>Increment and Store: {count}</button>
 }
+
+export default RecordClicks ;
