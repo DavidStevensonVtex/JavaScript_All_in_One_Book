@@ -1,4 +1,4 @@
-// Listing 4-4. Binding Class Methods Before Passing Them As Attributes
+// Listing 4-5: Binding a Method in the Constructor
 
 import React from 'react' ;
 
@@ -6,6 +6,7 @@ class ToggleVisibility extends React.Component {
     constructor(props) {
         super(props);
         this.state = { visible: true } ;
+        this.setVisibility = this.setVisibility.bind(this) ;
     }
 
     setVisibility() {
@@ -16,7 +17,7 @@ class ToggleVisibility extends React.Component {
         return (
             <div>
                 { this.state.visible ? this.props.children : '' }
-                <button onClick={this.setVisibility.bind(this) }>
+                <button onClick={ this.setVisibility }>
                     Show/Hide
                 </button>
             </div>
