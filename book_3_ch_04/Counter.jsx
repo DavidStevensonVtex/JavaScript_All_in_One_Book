@@ -9,3 +9,5 @@ function Count(props) {
     }
     return <button onClick={increment}>{counter}</button>
 }
+
+export default Counter ;
