@@ -7,7 +7,9 @@ function Count(props) {
     function increment(incrementBy = 1) {
         setCounter(counter + incrementBy);
     }
-    return <button onClick={increment}>{counter}</button>
+    // To pass arguments (other than the event object) to an event handler, you can
+    // define an arrow function that invokes an inner function.
+    return <button onClick={() => increment(2)}>Add 2 - {counter}</button>
 }
 
 export default Counter ;
